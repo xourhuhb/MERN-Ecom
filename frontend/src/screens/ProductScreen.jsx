@@ -25,6 +25,7 @@ const ProductScreen = () => {
     }
     selectedProduct()
   },[product])
+  
   // const { id: productId } = useParams();
   // const product = products.find((p) => p._id === productId);
   return (
