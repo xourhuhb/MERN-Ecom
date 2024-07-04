@@ -1,7 +1,6 @@
-import { request } from "express";
 import mongoose from "mongoose";
 
-const oderSchema = mongoose.Schema(
+const orderSchema = new mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
