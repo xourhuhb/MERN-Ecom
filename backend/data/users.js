@@ -1,8 +1,8 @@
 import bycrypt from "bcryptjs";
 
-const Users = [
+const Users = [                             //collection
   {
-    name: "Admin User",
+    name: "Admin User",                    //document
     email: "admin@mail.com",
     password: bycrypt.hashSync("123456", 10),
     isAdmin: true,
