@@ -13,7 +13,7 @@ import {
 import Rating from "../components/Rating";
 import { useGetProductDetailsQuery } from "../slices/productSliceApi";
 import Loader from "../components/Loader";
-import Messages from "../components/Messages";
+import Message from "../components/Message";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../slices/cartSlice";
 
@@ -41,9 +41,9 @@ const ProductScreen = () => {
       {isLoading ? (
         <Loader />
       ) : error ? (
-        <Messages variant="danger">
+        <Message variant="danger">
           {error?.data?.message || error.error}
-        </Messages>
+        </Message>
       ) : (
         <>
           <Row>
