@@ -12,10 +12,10 @@ import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import { Link, useNavigate } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
-import { addToCart, removeFromCart } from "../slices/cartSlice";
+import { addToCart, removeFromCart } from "../slices/cartSlice.js";
 
 const CartScreen = () => {
-  const cart = useSelector((store) => store.cart);
+  const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -28,7 +28,7 @@ const CartScreen = () => {
   };
 
   const checkoutHandler = () => {
-    navigate("/login?redirect=/shipping");
+    navigate("/shipping");
   };
 
   return (
