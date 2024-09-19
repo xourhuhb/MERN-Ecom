@@ -8,7 +8,6 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 import Loader from "../../components/Loader";
 import Message from "../../components/Message";
 import { LinkContainer } from "react-router-bootstrap";
-import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 
 const ProductListScreen = () => {
@@ -16,8 +15,6 @@ const ProductListScreen = () => {
 
   const [createProduct, { isLoading: loadingNewProduct }] =
     useCreateProductMutation();
-
-  const dispatch = useDispatch();
 
   const createProductHandler = async () => {
     if (window.confirm("Are you sure buddy?")) {
